@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: limits-service
+  config:
+    import: optional:configserver:http://localhost:8888
+  profiles:
+    active: qa
+  cloud:
+    config:
+      profile: qa
+
+limits-service:
+  minimum: 2
+  maximum: 998
+
+
