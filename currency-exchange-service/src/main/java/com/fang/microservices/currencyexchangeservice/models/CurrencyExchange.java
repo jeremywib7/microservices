@@ -1,18 +1,24 @@
-package com.fang.microservices.currencyexchangeservice.controller;
+package com.fang.microservices.currencyexchangeservice.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.math.BigDecimal;
 
 @Data
-@AllArgsConstructor
+@RequiredArgsConstructor
 @NoArgsConstructor
 public class CurrencyExchange {
+    @NonNull
     private Long id;
+
+    @NonNull
     private String from;
+
+    @NonNull
     private String to;
+
+    @NonNull
     private BigDecimal conversionMultiple;
+
     private String environment;
 }
